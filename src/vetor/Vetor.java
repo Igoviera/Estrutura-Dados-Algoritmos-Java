@@ -1,5 +1,8 @@
 package vetor;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Vetor {
 
     private String[] elementos;
@@ -26,5 +29,22 @@ public class Vetor {
         } else {
             throw new Exception("Vetor já está cheio");
         }
+    }
+
+    public String busca(int posicao) throws Exception{
+        if (! (posicao >= 0 && posicao < tamanho)){
+            throw new IllegalArgumentException("Posicão inválida");
+        }
+        return this.elementos[posicao];
+    }
+
+    public int tamanhoDoArray(){
+        return this.tamanho;
+    }
+
+    @Override
+    public String toString() {
+
+        return Arrays.toString(elementos);
     }
 }

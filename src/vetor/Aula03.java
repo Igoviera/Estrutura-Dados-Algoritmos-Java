@@ -11,5 +11,8 @@ public class Aula03 {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println(vetor.tamanhoDoArray());
+        System.out.println(vetor);
+
     }
 }
